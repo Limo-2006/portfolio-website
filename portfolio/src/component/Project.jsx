@@ -1,16 +1,11 @@
 import React from "react";
 import { Github, ExternalLink } from "lucide-react";
 
-import ecommerceLogo from "../assets/ecommerce.png"
-// import coffeeLogo from "../assets/coffee.png"
-
-// import ecommerce from "../assets/projects/ecommerce.png";
-// import coffee from "../assets/projects/coffee.png";
-// import restaurant from "../assets/projects/restaurant.png";
-// import landing from "../assets/projects/landing.png";
-// import portfolio from "../assets/projects/portfolio.png";
-// import quiz from "../assets/projects/quiz.png";
-// import calculator from "../assets/projects/calculator.png";
+import ecommerceLogo from "../assets/ecommerce.png";
+import coffeeLogo from "../assets/coffee.png";
+import foodLogo from "../assets/food.png";
+import dportfolioLogo from "../assets/dportfolio.png";
+import  calculatorLogo  from "../assets/calculator.png";
 
 const projects = [
   {
@@ -22,14 +17,14 @@ const projects = [
   },
   {
     title: "Coffee Shop Website",
-    image: ecommerceLogo,
+    image: coffeeLogo,
     description:
       "Clean and elegant coffee shop website with responsive design.",
     tech: ["HTML", "CSS"],
   },
   {
     title: "Food Restaurant Website",
-    image: ecommerceLogo,
+    image: foodLogo,
     description:
       "Restaurant website focused on menu presentation and UX.",
     tech: ["HTML", "Tailwind"],
@@ -43,7 +38,7 @@ const projects = [
   },
   {
     title: "Portfolio Single Page",
-    image: ecommerceLogo,
+    image: dportfolioLogo,
     description:
       "Personal portfolio single page with smooth sections.",
     tech: ["React", "Tailwind"],
@@ -51,15 +46,13 @@ const projects = [
   {
     title: "Quiz App",
     image: ecommerceLogo,
-    description:
-      "Interactive quiz application with score tracking.",
+    description: "Interactive quiz application with score tracking.",
     tech: ["JavaScript", "React"],
   },
   {
     title: "Calculator App",
-    image: ecommerceLogo,
-    description:
-      "Basic calculator app for practicing JavaScript logic.",
+    image: calculatorLogo,
+    description: "Basic calculator app for practicing JavaScript logic.",
     tech: ["JavaScript"],
   },
 ];
@@ -68,51 +61,48 @@ const Projects = () => {
   return (
     <section id="projects" className="bg-black text-white py-20 px-6">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold mb-6">
-          Projects<span className="text-purple-400">.</span>
+        <h2 className="text-4xl font-bold mb-12">
+          Projects <span className="text-purple-400">.</span>
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-gray-800 rounded-xl overflow-hidden hover:scale-[1.02] transition"
+              className="bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
             >
               {/* Image */}
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-56 object-cover"
-              />
+              <div className="overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-52 object-cover transition-transform duration-500 hover:scale-110"
+                />
+              </div>
 
               {/* Content */}
-              <div className="p-6">
-                <h3 className="text-2xl font-semibold mb-3">
-                  {project.title}
-                </h3>
+              <div className="p-5">
+                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+                <p className="text-gray-400 mb-4 text-sm">{project.description}</p>
 
-                <p className="text-gray-400 mb-4">
-                  {project.description}
-                </p>
-
-                <div className="flex flex-wrap gap-2 mb-5">
-                  {project.tech.map((item, i) => (
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.tech.map((tech, i) => (
                     <span
                       key={i}
-                      className="text-sm px-3 py-1 bg-gray-700 rounded-full"
+                      className="text-xs px-3 py-1 bg-purple-700 rounded-full"
                     >
-                      {item}
+                      {tech}
                     </span>
                   ))}
                 </div>
 
-                <div className="flex gap-4 text-gray-300">
-                  <span className="flex items-center gap-1">
+                <div className="flex gap-3">
+                  <button className="flex items-center gap-1 bg-gray-800 hover:bg-purple-700 px-3 py-1 rounded transition">
                     <Github size={16} /> Code
-                  </span>
-                  <span className="flex items-center gap-1">
+                  </button>
+                  <button className="flex items-center gap-1 bg-gray-800 hover:bg-purple-700 px-3 py-1 rounded transition">
                     <ExternalLink size={16} /> Live
-                  </span>
+                  </button>
                 </div>
               </div>
             </div>

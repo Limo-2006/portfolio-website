@@ -1,9 +1,9 @@
 import React from "react";
 import { Code, Monitor, Server } from "lucide-react";
 
-const AboutMe = () => {
+const About = () => {
   return (
-    <div className="bg-[#0b0f14] text-white py-16 px-4 sm:px-6 lg:px-8">
+    <section id="about" className=" bg-[#0b0f14] text-white py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-4xl font-bold mb-12">
           About Me<span className="text-purple-600">.</span>
@@ -66,8 +66,8 @@ const AboutMe = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
-export default AboutMe;
+export default About;

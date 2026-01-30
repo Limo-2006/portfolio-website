@@ -1,26 +1,21 @@
-import React from 'react'
-import {Routes, Route} from 'react-router-dom'
-import Home from './component/home'
-import About from './component/About'
-import Contact from './component/Contact'
-import Experience from './component/Experience'
-import Project from './component/project'
+import Navbar from "./component/Navbar";
+import Home from "./component/Home";
+import About from "./component/About";
+import Experience from "./component/Experience";
+import Projects from "./component/project";
+import Contact from "./component/Contact";
 
-
-const App = () => {
+function App() {
   return (
-
-    <Routes>
-<Route path='/' element={<Home />} />
-<Route path='/about' element={<About />} />
-<Route path='/contact' element={<Contact />} />
-<Route path='/experience' element={<Experience />} />
-<Route path='/project' element={<Project />} />
-<Route path='/contact' element ={<Contact />} />
- 
-
-    </Routes>
-  )
+    <>
+      <Navbar />
+      <Home />
+      <About />
+      <Experience />
+      <Projects />
+      <Contact />
+    </>
+  );
 }
 
-export default App
+export default App;

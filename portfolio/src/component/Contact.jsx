@@ -3,7 +3,7 @@ import { Mail, Phone, MapPin } from "lucide-react";
 
 const Contact = () => {
   return (
-    <div
+    <section id="contact"
       className="bg-[#0b0f14] text-white px-6 py-20"
     >
       <div className="max-w-5xl mx-auto">
@@ -75,7 +75,7 @@ const Contact = () => {
 
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

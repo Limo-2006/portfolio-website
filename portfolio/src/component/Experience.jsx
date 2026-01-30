@@ -3,7 +3,7 @@ import { Briefcase, Code, Users } from "lucide-react";
 
 const Experience = () => {
   return (
-    <div
+    <section id="experience"
       className="bg-[#0b0f14] text-white px-6 py-16 overflow-x-hidden"
     >
       {/* Header */}
@@ -104,7 +104,7 @@ const Experience = () => {
         </div>
 
       </main>
-    </div>
+    </section>
   );
 };
 
