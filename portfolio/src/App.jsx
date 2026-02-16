@@ -1,8 +1,8 @@
 import Navbar from "./component/Navbar";
-import Home from "./component/Home";
+import Home from "./component/home";
 import About from "./component/About";
 import Experience from "./component/Experience";
-import Projects from "./component/Project";
+import Projects from "./component/Projects";
 import Contact from "./component/Contact";
 
 function App() {

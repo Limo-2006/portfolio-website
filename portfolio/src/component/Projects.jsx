@@ -1,10 +1,9 @@
 import React from "react";
 import { Github, ExternalLink } from "lucide-react";
-
+import blogLogo from "../assets/blog.png";
 import ecommerceLogo from "../assets/ecommerce.png";
 import coffeeLogo from "../assets/coffee.png";
 import foodLogo from "../assets/food.png";
-import dportfolioLogo from "../assets/dportfolio.png";
 import  calculatorLogo  from "../assets/calculator.png";
 
 const projects = [
@@ -14,46 +13,45 @@ const projects = [
     description:
       "Modern e-commerce frontend with product listing, filtering and cart UI.",
     tech: ["React", "Tailwind"],
+     url: "https://e-commerce-ui-5r22.vercel.app/",
+     github: "https://github.com/Limo-2006/E-commerceUI.git" ,
   },
   {
-    title: "Coffee Shop Website",
+    title: "Blog & Dashboard UI",
+    image: blogLogo,
+    description:
+      "Clean blog and dashboard UI with card-based articles and interactive analytics.",
+    tech: ["React", "Tailwind"],
+     url: "https://blog-ui-blush.vercel.app/" ,
+     github:"https://github.com/Limo-2006/Blog-UI.git" , 
+  },
+  {
+    title: "Coffee Shop Website UI",
     image: coffeeLogo,
     description:
       "Clean and elegant coffee shop website with responsive design.",
     tech: ["HTML", "CSS"],
+    url: "https://coffee-website-coffee.vercel.app/" ,
+    github: "https://github.com/Limo-2006/coffee-website-coffee.git" ,
   },
   {
-    title: "Food Restaurant Website",
+    title: "Food Restaurant Website UI",
     image: foodLogo,
     description:
       "Restaurant website focused on menu presentation and UX.",
     tech: ["HTML", "Tailwind"],
+    url:"https://food-website-three-chi.vercel.app/",
+    github: "https://github.com/Limo-2006/food-website.git" ,
   },
-  {
-    title: "Landing Page",
-    image: ecommerceLogo,
-    description:
-      "Conversion-focused landing page with modern UI layout.",
-    tech: ["HTML", "CSS"],
-  },
-  {
-    title: "Portfolio Single Page",
-    image: dportfolioLogo,
-    description:
-      "Personal portfolio single page with smooth sections.",
-    tech: ["React", "Tailwind"],
-  },
-  {
-    title: "Quiz App",
-    image: ecommerceLogo,
-    description: "Interactive quiz application with score tracking.",
-    tech: ["JavaScript", "React"],
-  },
+  
+  
   {
     title: "Calculator App",
     image: calculatorLogo,
     description: "Basic calculator app for practicing JavaScript logic.",
     tech: ["JavaScript"],
+    url: "https://calculator-ui-six.vercel.app/" ,
+    github: "https://github.com/Limo-2006/calculator-UI.git" ,
   },
 ];
 
@@ -89,7 +87,12 @@ const Projects = () => {
                   {project.tech.map((tech, i) => (
                     <span
                       key={i}
-                      className="text-xs px-3 py-1 bg-purple-700 rounded-full"
+                      className="px-3 py-1 
+                  border border-purple-500/40 
+                  text-purple-600 text-sm font-semibold 
+                  rounded-md
+                  
+                  "
                     >
                       {tech}
                     </span>
@@ -97,13 +100,25 @@ const Projects = () => {
                 </div>
 
                 <div className="flex gap-3">
-                  <button className="flex items-center gap-1 bg-gray-800 hover:bg-purple-700 px-3 py-1 rounded transition">
-                    <Github size={16} /> Code
-                  </button>
-                  <button className="flex items-center gap-1 bg-gray-800 hover:bg-purple-700 px-3 py-1 rounded transition">
-                    <ExternalLink size={16} /> Live
-                  </button>
-                </div>
+   <a
+    href={project.github}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-1 bg-gray-800 hover:bg-purple-700 px-3 py-1 rounded transition"
+  >
+    <Github size={16} /> Code
+  </a>
+
+  <a
+    href={project.url}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-1 bg-gray-800 hover:bg-purple-700 px-3 py-1 rounded transition"
+  >
+    <ExternalLink size={16} /> Live
+  </a>
+</div>
+
               </div>
             </div>
           ))}

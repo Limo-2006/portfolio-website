@@ -4,14 +4,14 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   const linkClass =
-    "text-gray-300 hover:text-teal-400 transition cursor-pointer";
+    "text-gray-300 hover:text-purple-400 transition cursor-pointer";
 
   return (
     <nav className="fixed top-0 w-full bg-[#0b0f14]  z-50">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
-        <h1 className="text-2xl font-bold text-white">
-          Limo<span className="text-teal-400">.</span>
+        <h1 className="text-2xl font-serif font-bold text-white">
+          Limo<span className="text-purple-400">.</span>
         </h1>
 
         {/* Desktop */}

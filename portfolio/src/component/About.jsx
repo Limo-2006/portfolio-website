@@ -42,14 +42,14 @@ const About = () => {
               I work mainly with modern technologies like React and Tailwind
               CSS, focusing on performance and usability.
               <br /><br />
-              I am currently building real-world projects and preparing
-              professional workflows for freelance platforms like Upwork
-              and Fiverr.
+             "My workflow is optimized for professional freelance standards,
+              focusing on clean architecture, Git version control, and seamless deployment to help 
+              clients launch their projects successfully.".
             </p>
 
             <div className="flex flex-wrap gap-8">
               <div>
-                <p className="text-3xl font-bold text-purple-600">10+</p>
+                <p className="text-3xl font-bold text-purple-600">5</p>
                 <p className="text-gray-400">Portfolio Projects</p>
               </div>
 

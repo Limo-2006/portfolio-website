@@ -91,7 +91,7 @@ const Experience = () => {
           </p>
 
           <p className="text-gray-400 text-base mb-4 leading-relaxed">
-            Preparing professional workflow and communication for freelance
+            Refining professional workflow and communication for freelance
             projects.
           </p>
 
