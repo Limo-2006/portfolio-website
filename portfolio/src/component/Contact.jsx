@@ -141,6 +141,7 @@ const Contact = () => {
   };
 
   return (
+    
     <section id="contact" className="bg-[#0b0f14] text-white px-6 py-20">
       <div className="max-w-5xl mx-auto">
         {/* Heading */}
